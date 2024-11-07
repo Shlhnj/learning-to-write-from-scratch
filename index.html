@@ -1,22 +1,170 @@
 <!doctype html>
+
 <html>
-  <head>
-    <style>
-      body {
-        background-color: darkblue;
-      }
-      h1 {
-        color: yellow;
-        text-align: center;
-      }
-      p {
-        font-family: arial;
-        font-size: 20px;
-      }
-    </style>
-  </head>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
+        <title>Blank template</title>
+
+        <!-- Load external CSS styles -->
+        <!-- <link rel="stylesheet" href="styles.css"> -->
+        <!-- use internal CSS styles -->
+        <style>
+            body {
+                background-color: darkblue; /*color, rgb, hsv, dll */
+                background-image: url("https://upload.wikimedia.org/wikipedia/commons/b/b9/Caspar_David_Friedrich_-_Wanderer_above_the_sea_of_fog.jpg");
+                background-repeat: repeat-x-y; /* -x, -y */
+                background-opacity: 0.3;
+                background-position: right bottom;
+                background-attachment: scroll; /*fixed */
+                background-size: contain; /* auto, length, percentage, cover, contain, initial, inherit */
+                background-blend-mode: luminosity; /*saturation, */
+                background-clip: padding-box;
+                /* background properties or shorthand list: color, image, repeat, attachment, position */
+                
+                border-width: 10px 10px 10px 30px; /*without space between value and px,pt,cm,em,etc. medium, thick (can have four value; top, right, bottom, left) */
+                border-style: outset; /* dotted, dashed, soled, double, groove, ridge, inset, outset, none, hidden, mix */
+                border-color: rgba(255,50,10,0.8);
+                /* border properties or shorthand list: width, style, color,  */
+                border-right-color: f0c;
+            }
+
+            h1 {
+                color: yellow;
+                text-align: center;
+                border: 10px solid rgba(255,200,10,0.8);
+                margin: 5cm 0 0 10cm ; 
+                /*top, right, bottom, left.
+                The margin property also affects the total space that the box will take up on the page, 
+                but the margin is not included in the actual size of the box. 
+                The box's total width and height stops at the border.*/
+                max-width: 500px;
+                border-radius: 15px;
+                height: 100px;
+                padding: 30px;
+                outline: 5px inset crimson;
+                /*An outline is a line that is drawn around elements, 
+                OUTSIDE the borders, to make the element "stand out".
+                */
+                outline-offset: 2px;
+                /*The outline-offset property adds space between an outline and the edge/border
+                 of an element. The space between an element and its outline is transparent.
+                */
+                font-family: Georgia, Spectral, serif;
+                font-size: 30px;
+                text-transform: capitalize;
+            }
+
+            p.intro {
+                font-family: arial;
+                font-size: 20px;
+                border: 10px solid fc0;
+                border-radius: 25px;
+                margin-left: 10px;
+                padding: 10px; /*top, right, bottom, left*/
+                box-sizing: border-box;
+            }
+
+            p.body1 {
+                text-align: center;
+                text-indent: 20 px;
+                text-align-last: justify;
+                font-family: "Verdana", Rubik, sans-serif;
+            }
+
+            p.body2 {
+                text-decoration-line: overline; /*overline, underline, line-through*/
+                text-decoration-color: rgba(255,255,255,0.8);
+                text-decoration-style: wavy;
+                text-decoration-thickness: 5%; 
+                /*text-decoration-line (required)
+                text-decoration-color (optional)
+                text-decoration-style (optional)
+                text-decoration-thickness (optional)*/
+                letter-spacing: 5px;
+                line-height: 50px;
+                font-family: "Lucida Console", "Courier New", monospace;
+                font-style: italic; /*italic, oblique, normal */
+                font-weight: bold; /*normal, bold */
+                font-variant: small-caps; /*normal, small-caps*/
+                font-size: 2.5em; /* 1em=16px, or current/default font size. percentage, or vw (viewport width, 1vw = 1% viewport width) */
+                }
+
+            p.body3 {
+                font-family: "Sofia", sans-serif;
+                }
+
+            p.outro {
+                text-align: left;
+                direction: rtl;
+                unicode-bidi: bidi-override;
+                vertical-align: super; /* baseline, text-top, text-bottom, sub, super*/
+                text-transform: uppercase; /* uppercase; lowercase; capitalize */
+                word-spacing: 30px;
+                text-shadow: 3px 3px 5px white, 0 0 25px brown, 0 0 15px green; /*horizontal, vertical, blur, color */
+                font-family: Arial, Helvetica, sans-serif; 
+                /* Here, there are three font types: Arial, Helvetica, and sans-serif. 
+                The second and third fonts are backups, in case the first one is not found. 
+                The following list are the best web safe fonts for HTML and CSS:
+                Arial (sans-serif)
+                Verdana (sans-serif)
+                Tahoma (sans-serif)
+                Trebuchet MS (sans-serif)
+                Times New Roman (serif)
+                Georgia (serif)
+                Garamond (serif)
+                Courier New (monospace)
+                Brush Script MT (cursive)
+                
+                font shorthand: 
+                font-style
+                font-variant
+                font-weight
+                font-size/line-height
+                font-family*/
+
+                }
+
+            
+
+        </style>
+    </head>
+  
   <body>
-    <h1> My First CSS Example I wrote myself </h1>
-    <p> This is a paragraph</p>
+    <h1 style="background-color: navy"> My First CSS Example I wrote myself </h1>
+    <p class="intro", style="background-color:midnightblue"> This is a paragraph, </br>
+        I use w3schools
+    </p>
+
+    <div style="color:red;">
+        <section>
+            <p class="body1", style="background-color:white; border-style: dotted solid dashed solid; radius: 5px"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus volutpat sed quam non malesuada. Morbi ante ante, sodales at convallis vitae, volutpat sed dui. Cras tempus viverra sodales. Curabitur semper pellentesque neque sit amet sodales. Praesent ac nisl tempus, bibendum dolor fermentum, tincidunt nunc. Curabitur fermentum tortor at urna euismod, vel ultricies lorem commodo. Duis egestas massa nec erat bibendum lobortis. In hac habitasse platea dictumst. Nam tincidunt neque sit amet sem varius, a pellentesque dolor congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris in ante accumsan, interdum orci at, pharetra ipsum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+
+                </br> 
+                </br> Aliquam in mollis sem, quis malesuada tortor. Integer nunc diam, pulvinar sed laoreet eget, suscipit sit amet risus. Vivamus mollis malesuada lectus sit amet consectetur. Aenean facilisis maximus tristique. Integer et consequat purus, at malesuada nunc. Pellentesque sed justo faucibus ex interdum convallis vitae eget turpis. Fusce eu porttitor ante. Ut vitae fermentum ligula. Etiam ac lorem sit amet massa eleifend fermentum ut vitae justo. Morbi blandit nisl at ipsum lacinia vehicula. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas quis congue magna. Integer ultricies lectus nec vehicula luctus. Nulla sed quam id ipsum venenatis gravida. Nulla facilisi.
+
+                </br> 
+                </br> Nullam feugiat, mi non pulvinar vulputate, quam nisi venenatis ante, non auctor ex enim nec metus. Nunc fringilla maximus luctus. Suspendisse ornare tortor quis libero facilisis dignissim. Proin condimentum metus ut neque eleifend, sit amet posuere sapien aliquet. Proin pellentesque quam vel purus eleifend pulvinar. Pellentesque sagittis rutrum neque, vitae ullamcorper sem blandit ac. Praesent rutrum sapien odio, ut consequat eros egestas et. Proin consequat dui et dolor consequat viverra.
+
+                </br> 
+
+                </br> 
+                </br> 
+            </p>
+
+
+            <p class="body2"> 
+                 </br> Ut nec elit aliquam, consectetur lacus nec, varius velit. Aliquam lobortis lorem efficitur massa consectetur, vitae efficitur lectus porta. Ut nec urna eu arcu mattis efficitur. Nunc pulvinar dignissim suscipit. Suspendisse porta malesuada pellentesque. Proin quis lectus eget augue cursus varius. Sed condimentum tincidunt tortor vel consequat.
+            </p>
+
+            <p class="font-effect-fire"> 
+                Ut vulputate dui dui. Sed ornare elit nec metus molestie, quis blandit risus malesuada. Phasellus congue, mi in accumsan finibus, enim turpis congue lorem, at eleifend est odio quis risus. Duis et dapibus eros, at varius sapien. In tristique, dolor vitae aliquet sodales, lacus urna tempor lorem, ut laoreet massa erat vel nibh. Suspendisse quis magna efficitur, tempus odio id, pretium metus. Duis lectus risus, volutpat eu nisi eu, blandit viverra orci. In hendrerit mauris nunc, molestie pretium ante convallis eu. Sed porta lorem id risus mollis, a convallis risus iaculis. Donec rhoncus lectus at diam mollis, ut pharetra magna tincidunt. Nullam quis lacus magna. Fusce in justo sit amet velit viverra porta. Etiam varius maximus felis at sodales. Donec congue libero viverra mauris accumsan, id pulvinar orci molestie.
+            </p> 
+
+            <p class="outro">
+                "Et tu brute?!!"
+            </p>
+        </section>
+    </div>
   </body>
 </html>
