@@ -18,22 +18,30 @@
         <style>
             /*unvisited link*/
             a:link {
-            color: cyan; 
+            color: cyan;
+            background-color: purple;
+            padding: 20px 10px;
+            text-align: left;
+            text-decoration: underline;
+            display: inline-block;
             }
 
             /*visited link*/
             a:visited {
-            color: green; 
+            color: green;
+            background-color: aquamarine; 
             }
 
             /*mouse over link*/
             a:hover {
-            color: yellow; 
+            color: yellow;
+            background-color: coral; 
             }
 
             /*selected link*/
             a:active {
             color: blue; 
+            background-color: gold;
             }
 
 
@@ -171,16 +179,49 @@
     <i class="fa brands fa-researchgate"></i>
     <i class="fa brands fa-orcid"></i>
 
-    <p class="intro"><b>ResearchGate:       </b><a href="https://www.researchgate.net/profile/Muhammad-Jihadi-2"
-    target="_blank" rel="noopener noreferrer">My Publications</a></p>
-    </br>
-    <p class="intro"><b>ORCID:     </b><a href="https://orcid.org/0009-0003-7193-7298"
-    target="_blank" rel="noopener noreferrer">More Publications 2</a></p>
+    <p>
+        <ul style-type="circle", style-position:"outside">
+            <li><b>ResearchGate:</b><a href="https://www.researchgate.net/profile/Muhammad-Jihadi-2" target="_blank" rel="noopener noreferrer">My Publications</a></li>
+            <li><b>ORCID:</b><a href="https://orcid.org/0009-0003-7193-7298" target="_blank" rel="noopener noreferrer">
+                <span style="cursor: pointer">More Publications 2</a></span></li>
+        </ul>
+    </p>
+
+        <!--
+            In HTML, there are two main types of lists:
+
+            unordered lists (<ul>) - the list items are marked with bullets
+            ordered lists (<ol>) - the list items are marked with numbers or letters
+                -style-type (ul=circle, square,) (ol=upper-roman, lower-alpha)
+                    -position (inside,outside)
+                    -image
+
+            <span style="cursor: auto">auto</span><br>
+            <span style="cursor: crosshair">crosshair</span><br>
+            <span style="cursor: default">default</span><br>
+            <span style="cursor: e-resize">e-resize</span><br>
+            <span style="cursor: help">help</span><br>
+            <span style="cursor: move">move</span><br>
+            <span style="cursor: n-resize">n-resize</span><br>
+            <span style="cursor: ne-resize">ne-resize</span><br>
+            <span style="cursor: nw-resize">nw-resize</span><br>
+            <span style="cursor: pointer">pointer</span><br>
+            <span style="cursor: progress">progress</span><br>
+            <span style="cursor: s-resize">s-resize</span><br>
+            <span style="cursor: se-resize">se-resize</span><br>
+            <span style="cursor: sw-resize">sw-resize</span><br>
+            <span style="cursor: text">text</span><br>
+            <span style="cursor: w-resize">w-resize</span><br>
+            <span style="cursor: wait">wait</span>
+        -->
 
     <div style="color:red;">
         <section>
-            <p class="body1", style="background-color:white; border-style: dotted solid dashed solid; radius: 5px"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus volutpat sed quam non malesuada. Morbi ante ante, sodales at convallis vitae, volutpat sed dui. Cras tempus viverra sodales. Curabitur semper pellentesque neque sit amet sodales. Praesent ac nisl tempus, bibendum dolor fermentum, tincidunt nunc. Curabitur fermentum tortor at urna euismod, vel ultricies lorem commodo. Duis egestas massa nec erat bibendum lobortis. In hac habitasse platea dictumst. Nam tincidunt neque sit amet sem varius, a pellentesque dolor congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris in ante accumsan, interdum orci at, pharetra ipsum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-
+            
+            <p class="body1", style="background-color:white; border-style: dotted solid dashed solid; radius: 5px"> 
+                <span style="cursor: crosshair">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus volutpat sed quam non malesuada. Morbi ante ante, sodales at convallis vitae, volutpat sed dui. Cras tempus viverra sodales. Curabitur semper pellentesque neque sit amet sodales. Praesent ac nisl tempus, bibendum dolor fermentum, tincidunt nunc. Curabitur fermentum tortor at urna euismod, vel ultricies lorem commodo. Duis egestas massa nec erat bibendum lobortis. In hac habitasse platea dictumst. Nam tincidunt neque sit amet sem varius, a pellentesque dolor congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris in ante accumsan, interdum orci at, pharetra ipsum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+            
                 </br> 
                 </br> Aliquam in mollis sem, quis malesuada tortor. Integer nunc diam, pulvinar sed laoreet eget, suscipit sit amet risus. Vivamus mollis malesuada lectus sit amet consectetur. Aenean facilisis maximus tristique. Integer et consequat purus, at malesuada nunc. Pellentesque sed justo faucibus ex interdum convallis vitae eget turpis. Fusce eu porttitor ante. Ut vitae fermentum ligula. Etiam ac lorem sit amet massa eleifend fermentum ut vitae justo. Morbi blandit nisl at ipsum lacinia vehicula. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas quis congue magna. Integer ultricies lectus nec vehicula luctus. Nulla sed quam id ipsum venenatis gravida. Nulla facilisi.
 
@@ -191,6 +232,7 @@
 
                 </br> 
                 </br> 
+                </span>
             </p>
 
 
