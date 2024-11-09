@@ -75,7 +75,7 @@
                 The box's total width and height stops at the border.*/
                 max-width: 500px;
                 border-radius: 15px;
-                height: 100px;
+                height: 50px;
                 padding: 30px;
                 outline: 5px inset crimson;
                 /*An outline is a line that is drawn around elements, 
@@ -103,9 +103,9 @@
             }
 
             p.body1 {
-                text-align: center;
+                text-align: justify;
                 text-indent: 20 px;
-                text-align-last: justify;
+                text-align-last: center;
                 font-family: "Verdana", Rubik, sans-serif;
             }
 
@@ -125,11 +125,11 @@
                 font-weight: bold; /*normal, bold */
                 font-variant: small-caps; /*normal, small-caps*/
                 font-size: 2.5em; /* 1em=16px, or current/default font size. percentage, or vw (viewport width, 1vw = 1% viewport width) */
-                }
+            }
 
             p.body3 {
                 font-family: "Sofia", sans-serif;
-                }
+            }
 
             p.outro {
                 text-align: left;
@@ -160,7 +160,37 @@
                 font-size/line-height
                 font-family*/
 
-                }
+            }
+
+            .clearfix {
+                overflow: auto;
+            }
+
+            table, td, th, {
+                text-align: center;
+                border: 2px solid white;
+                border-collapse: collapse;
+            }
+
+            table {
+                
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            th {
+                border: 2px solid;
+                height: 30px;
+                background-color: brown;
+            }
+            td {
+                text-align: center;
+                border: 2px solid;
+                padding: 15px;
+            }
+            tr {
+                border: 2px solid;
+            }
 
             
 
@@ -168,7 +198,16 @@
     </head>
   
   <body>
-    <h1 style="background-color: navy"> My First CSS Example I wrote myself </h1>
+    <h1 style="background-color: navy; margin:auto; position:sticky; top:5px;"> My First CSS Example I wrote myself </h1>
+<!--    
+            The position property specifies the type of positioning method 
+            used for an element (static, relative, fixed, absolute or sticky)
+            Note: You must specify at least one of top, right, bottom or left
+             for sticky positioning to work..
+
+             The overflow property has the following values:
+-->
+           
     <p class="intro", style="background-color:midnightblue"> This is a paragraph, </br>
         I use w3schools
     </p>
@@ -180,21 +219,97 @@
     <i class="fa brands fa-orcid"></i>
 
     <p>
-        <ul style-type="circle", style-position:"outside">
-            <li><b>ResearchGate:</b><a href="https://www.researchgate.net/profile/Muhammad-Jihadi-2" target="_blank" rel="noopener noreferrer">My Publications</a></li>
-            <li><b>ORCID:</b><a href="https://orcid.org/0009-0003-7193-7298" target="_blank" rel="noopener noreferrer">
+        <ul style-type="circle", style-position="outside">
+            <li style="display:inline"><b>ResearchGate:</b><a href="https://www.researchgate.net/profile/Muhammad-Jihadi-2" target="_blank" rel="noopener noreferrer">My Publications</a></li>
+            <li style="display:inline"><b>ORCID:</b><a href="https://orcid.org/0009-0003-7193-7298" target="_blank" rel="noopener noreferrer">
                 <span style="cursor: pointer">More Publications 2</a></span></li>
         </ul>
-    </p>
+    </p> 
+            <!--
+                In HTML, there are two main types of lists:
+
+                unordered lists (<ul>) - the list items are marked with bullets
+                ordered lists (<ol>) - the list items are marked with numbers or letters
+                    -style-type (ul=circle, square,) (ol=upper-roman, lower-alpha)
+                          -position (inside,outside)
+                           -image
+            -->
+
+
+
+    <div style="overflow-x:auto;color:red;">
+        <section>
+            
+            <p class="body1", style="background-color:white; border-style: dotted solid dashed solid; radius: 5px; overflow:auto"> 
+                <span style="cursor: crosshair">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus volutpat sed quam non malesuada. Morbi ante ante, sodales at convallis vitae, volutpat sed dui. Cras tempus viverra sodales. Curabitur semper pellentesque neque sit amet sodales. Praesent ac nisl tempus, bibendum dolor fermentum, tincidunt nunc. Curabitur fermentum tortor at urna euismod, vel ultricies lorem commodo. Duis egestas massa nec erat bibendum lobortis. In hac habitasse platea dictumst. Nam tincidunt neque sit amet sem varius, a pellentesque dolor congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris in ante accumsan, interdum orci at, pharetra ipsum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+            
+                </br> 
+                </br> Aliquam in mollis sem, quis malesuada tortor. Integer nunc diam, pulvinar sed laoreet eget, suscipit sit amet risus. Vivamus mollis malesuada lectus sit amet consectetur. Aenean facilisis maximus tristique. Integer et consequat purus, at malesuada nunc. Pellentesque sed justo faucibus ex interdum convallis vitae eget turpis. Fusce eu porttitor ante. Ut vitae fermentum ligula. Etiam ac lorem sit amet massa eleifend fermentum ut vitae justo. Morbi blandit nisl at ipsum lacinia vehicula. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas quis congue magna. Integer ultricies lectus nec vehicula luctus. Nulla sed quam id ipsum venenatis gravida. Nulla facilisi.
+
+                </br> 
+                </br> Nullam feugiat, mi non pulvinar vulputate, quam nisi venenatis ante, non auctor ex enim nec metus. Nunc fringilla maximus luctus. Suspendisse ornare tortor quis libero facilisis dignissim. Proin condimentum metus ut neque eleifend, sit amet posuere sapien aliquet. Proin pellentesque quam vel purus eleifend pulvinar. Pellentesque sagittis rutrum neque, vitae ullamcorper sem blandit ac. Praesent rutrum sapien odio, ut consequat eros egestas et. Proin consequat dui et dolor consequat viverra.
+
+                </br> 
+            
+            
+                </br> <img src="https://www.researchgate.net/profile/Daniel-Alongi/publication/343485875/figure/fig2/AS:941971795349504@1601594985528/A-mass-balance-model-of-carbon-flow-through-the-worlds-mangrove-ecosystems-updated-from_W640.jpg"
+                           alt="Figure 5. A mass balance model of carbon flow through the world's mangrove ecosystems"
+                           style="width:500px; height:300px;margin-left: 15px; float:right">
+                    Units are Tg C a −1 . The budget assumes a global mangrove area of 86,495 km 2 [116]. 
+                    Solid blue arrows represent mean values based on empirical data (see text for explanation
+                    and references.) Dashed red arrows represent mean values estimated indirectly (by difference).  
+                    The Corg pool (both roots and soil) in soils to a depth of 1 m is presented as a box in the forest floor with units of Tg C.  
+                    Unquantified inputs of dissolved carbon from land-derived groundwater and organic matter inputs from adjacent marine and catchments are not depicted. 
+                    Abbreviations: GPP = gross primary production; NPP = net primary production; RAa = algal respiration; RC = canopy respiration; RS = soil respiration at soil surface; 
+                    RWATER = waterway respiration; POC = particulate organic matter; DIC = dissolved inorganic carbon; DOC = dissolved organic carbon; CH4 = methane; EDOC = exchangeable 
+                    dissolved organic carbon. </br>
+                </br> Source: Alongi, Daniel. (2020). Carbon Cycling in the World's Mangrove Ecosystems Revisited: Significance of Non-Steady State Diagenesis and Subsurface Linkages between the 4 Forest Floor and the Coastal Ocean 5 7 8. Forests. 11. 10.3390/f11090977. 
+                </span>
+            </p>
+
+
+            <p class="body2"> 
+                 </br> Ut nec elit aliquam, consectetur lacus nec, varius velit. Aliquam lobortis lorem efficitur massa consectetur, vitae efficitur lectus porta. Ut nec urna eu arcu mattis efficitur. Nunc pulvinar dignissim suscipit. Suspendisse porta malesuada pellentesque. Proin quis lectus eget augue cursus varius. Sed condimentum tincidunt tortor vel consequat.
+            </p>
+
+            <p class="font-effect-fire"> 
+                Ut vulputate dui dui. Sed ornare elit nec metus molestie, quis blandit risus malesuada. Phasellus congue, mi in accumsan finibus, enim turpis congue lorem, at eleifend est odio quis risus. Duis et dapibus eros, at varius sapien. In tristique, dolor vitae aliquet sodales, lacus urna tempor lorem, ut laoreet massa erat vel nibh. Suspendisse quis magna efficitur, tempus odio id, pretium metus. Duis lectus risus, volutpat eu nisi eu, blandit viverra orci. In hendrerit mauris nunc, molestie pretium ante convallis eu. Sed porta lorem id risus mollis, a convallis risus iaculis. Donec rhoncus lectus at diam mollis, ut pharetra magna tincidunt. Nullam quis lacus magna. Fusce in justo sit amet velit viverra porta. Etiam varius maximus felis at sodales. Donec congue libero viverra mauris accumsan, id pulvinar orci molestie.
+            </p> 
+
+            <p class="outro">
+                "Et tu brute?!!"
+            </p>
+
+            <div style="overflow-x:auto">
+            <table>
+                <tr> <!--/*table row*/--> <b>
+                    <th>Monke Name</th><!--/*table heading?*/-->
+                    <th>Appearances</th>
+                    <th>Role</th>
+                </tr> </b>
+                <tr>
+                    <td> Cesar </td>
+                    <td style="visibility:hidden"> 1-3 </td>
+                    <td> Founder, Patriarch </td>
+                </tr>
+                <tr>
+                    <td> King Julien </td>
+                    <td> Madagascar </td>
+                    <td> I like to move it </td>
+                </tr>
+            </table>
+            </div>
+        </section>
+    </div>
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
+
 
         <!--
-            In HTML, there are two main types of lists:
-
-            unordered lists (<ul>) - the list items are marked with bullets
-            ordered lists (<ol>) - the list items are marked with numbers or letters
-                -style-type (ul=circle, square,) (ol=upper-roman, lower-alpha)
-                    -position (inside,outside)
-                    -image
 
             <span style="cursor: auto">auto</span><br>
             <span style="cursor: crosshair">crosshair</span><br>
@@ -213,44 +328,14 @@
             <span style="cursor: text">text</span><br>
             <span style="cursor: w-resize">w-resize</span><br>
             <span style="cursor: wait">wait</span>
+
+
+            visible - Default. The overflow is not clipped. The content renders outside the element's box
+            hidden - The overflow is clipped, and the rest of the content will be invisible
+            scroll - The overflow is clipped, and a scrollbar is added to see the rest of the content
+            auto - Similar to scroll, but it adds scrollbars only when necessary
+            Note: The overflow property only works for block elements with a specified height.
+
+            Note: In OS X Lion (on Mac), scrollbars are hidden by default and only shown when being used 
+            (even though "overflow:scroll" is set).
         -->
-
-    <div style="color:red;">
-        <section>
-            
-            <p class="body1", style="background-color:white; border-style: dotted solid dashed solid; radius: 5px"> 
-                <span style="cursor: crosshair">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus volutpat sed quam non malesuada. Morbi ante ante, sodales at convallis vitae, volutpat sed dui. Cras tempus viverra sodales. Curabitur semper pellentesque neque sit amet sodales. Praesent ac nisl tempus, bibendum dolor fermentum, tincidunt nunc. Curabitur fermentum tortor at urna euismod, vel ultricies lorem commodo. Duis egestas massa nec erat bibendum lobortis. In hac habitasse platea dictumst. Nam tincidunt neque sit amet sem varius, a pellentesque dolor congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris in ante accumsan, interdum orci at, pharetra ipsum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-            
-                </br> 
-                </br> Aliquam in mollis sem, quis malesuada tortor. Integer nunc diam, pulvinar sed laoreet eget, suscipit sit amet risus. Vivamus mollis malesuada lectus sit amet consectetur. Aenean facilisis maximus tristique. Integer et consequat purus, at malesuada nunc. Pellentesque sed justo faucibus ex interdum convallis vitae eget turpis. Fusce eu porttitor ante. Ut vitae fermentum ligula. Etiam ac lorem sit amet massa eleifend fermentum ut vitae justo. Morbi blandit nisl at ipsum lacinia vehicula. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas quis congue magna. Integer ultricies lectus nec vehicula luctus. Nulla sed quam id ipsum venenatis gravida. Nulla facilisi.
-
-                </br> 
-                </br> Nullam feugiat, mi non pulvinar vulputate, quam nisi venenatis ante, non auctor ex enim nec metus. Nunc fringilla maximus luctus. Suspendisse ornare tortor quis libero facilisis dignissim. Proin condimentum metus ut neque eleifend, sit amet posuere sapien aliquet. Proin pellentesque quam vel purus eleifend pulvinar. Pellentesque sagittis rutrum neque, vitae ullamcorper sem blandit ac. Praesent rutrum sapien odio, ut consequat eros egestas et. Proin consequat dui et dolor consequat viverra.
-
-                </br> 
-
-                </br> 
-                </br> 
-                </span>
-            </p>
-
-
-            <p class="body2"> 
-                 </br> Ut nec elit aliquam, consectetur lacus nec, varius velit. Aliquam lobortis lorem efficitur massa consectetur, vitae efficitur lectus porta. Ut nec urna eu arcu mattis efficitur. Nunc pulvinar dignissim suscipit. Suspendisse porta malesuada pellentesque. Proin quis lectus eget augue cursus varius. Sed condimentum tincidunt tortor vel consequat.
-            </p>
-
-            <p class="font-effect-fire"> 
-                Ut vulputate dui dui. Sed ornare elit nec metus molestie, quis blandit risus malesuada. Phasellus congue, mi in accumsan finibus, enim turpis congue lorem, at eleifend est odio quis risus. Duis et dapibus eros, at varius sapien. In tristique, dolor vitae aliquet sodales, lacus urna tempor lorem, ut laoreet massa erat vel nibh. Suspendisse quis magna efficitur, tempus odio id, pretium metus. Duis lectus risus, volutpat eu nisi eu, blandit viverra orci. In hendrerit mauris nunc, molestie pretium ante convallis eu. Sed porta lorem id risus mollis, a convallis risus iaculis. Donec rhoncus lectus at diam mollis, ut pharetra magna tincidunt. Nullam quis lacus magna. Fusce in justo sit amet velit viverra porta. Etiam varius maximus felis at sodales. Donec congue libero viverra mauris accumsan, id pulvinar orci molestie.
-            </p> 
-
-            <p class="outro">
-                "Et tu brute?!!"
-            </p>
-        </section>
-    </div>
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    -->
-  </body>
-</html>
